@@ -1,7 +1,12 @@
 package com.Experiment.Spring5webapp2.Repositories;
 
-import com.Experiment.Spring5webapp2.domain.Publisher;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PublisherRepository extends CrudRepository<Publisher, Long> {
+import com.Experiment.Spring5webapp2.domain.Publisher;
+
+public interface PublisherRepository extends JpaRepository<Publisher, Long> {
+	
+	
+	
+	
 }

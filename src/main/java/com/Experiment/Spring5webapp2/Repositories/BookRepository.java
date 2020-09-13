@@ -1,7 +1,16 @@
 package com.Experiment.Spring5webapp2.Repositories;
 
-import com.Experiment.Spring5webapp2.domain.Book;
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+import java.util.Set;
 
-public interface BookRepository extends CrudRepository <Book, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Experiment.Spring5webapp2.domain.Author;
+import com.Experiment.Spring5webapp2.domain.Book;
+
+public interface BookRepository extends JpaRepository <Book, Long> {
+
+
+	List<Book> findAllByAuthorsIn(Set<Author> authors);
+
 }
